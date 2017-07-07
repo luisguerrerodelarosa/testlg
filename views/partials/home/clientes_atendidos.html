@@ -1,0 +1,15 @@
+<div ng-if="charts.clientesAtendidos">
+	<div class="row mT30">
+		<div class="col-sm-12">
+			<h1>Clientes atendidos</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12 mT20 gray-wrapper">
+			<div class="p30">
+				<canvas id="bar" class="chart chart-bar"
+				  chart-data="charts.clientesAtendidos.data" chart-labels="charts.clientesAtendidos.labels" chart-series="charts.clientesAtendidos.series" chart-legend="true">
+				</canvas>
+			</div>
+		</div>
+</div>

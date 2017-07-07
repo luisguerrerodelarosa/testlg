@@ -1,0 +1,8 @@
+<nav>
+	<ul class="menu">
+		<li ng-repeat="(key, value) in menu" ng-class="{'active': key == currentPage.name}">
+			<a ng-href="#{{value.url}}"><i class="menu-item" ng-class="{'active': key == currentPage.name, {{key}}: true }"></i>{{value.menuItem}}</a>
+		</li>
+	</ul>
+</nav>
+<!-- <button class="btn btn-warning" ng-click="cancel($event)">Cancel</button> -->

@@ -1,0 +1,26 @@
+<div class="row">
+	<div class="col-sm-12">
+		<h1>Transacciones por mes</h1>
+		<h2>Millones de Transacciones</h2>
+	</div>
+</div>
+<div class="row row-eq-height">
+	<div class="col-sm-5 gray-wrapper">
+		<div class="title-wrapper">
+			Total Transacciones {{servicesParams.year}}
+		</div>
+		<div class="p15">
+			<dashboard-chart></dashboard-chart>
+			<canvas id="doughnut" class="chart chart-doughnut" chart-legend="true"
+			  chart-data="charts.totalTransaccionesAnio.data" chart-labels="charts.totalTransaccionesAnio.labels" ng-if="charts.totalTransaccionesAnio">
+			</canvas> 
+		</div>
+	</div>
+	<div class="col-sm-7 gray-wrapper">
+		<div class="mT20 p15">
+			<canvas id="bar" class="chart chart-bar"
+			  chart-data="charts.transaccionesAlMes.data" chart-labels="charts.transaccionesAlMes.labels" chart-series="charts.transaccionesAlMes.series" chart-legend="true" ng-if="charts.transaccionesAlMes">
+			</canvas>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,10 @@
+<!-- BOTÓN MENÚ PARA MÓVILES-->
+<div class="visible-xs">
+	<button type="button" class="btn btn-default btn-lg  burger-menu" ng-click="openMenu()" >
+	 	<span class="glyphicon glyphicon-align-justify"></span>
+	</button>
+	{{currentPage.menuItem}}
+</div>
+
+<!-- CARGA DE TEMPLATE PARA MENÚ EN DESKTOP-->
+<ng-include src="'views/partials/templates/menu-tpl.html'" class="hidden-xs"></ng-include>

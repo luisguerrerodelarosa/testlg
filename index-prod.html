@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="dashboard" ng-controller="mainCtrl">
+<head>
+    <meta charset="utf-8">
+    <title>Banorte Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--css-->
+    <link href="css/styles.min.css" rel="stylesheet">
+     <!--[if IE]><link href="css/ie.css" rel="stylesheet"><![endif]-->
+    <!--js-->
+    <script src="js/app.min.js"></script>
+</head>
+<body ng-class="asideState.position"> 
+    <section class="navigation">    
+        <menu></menu> 
+    </section>
+    <section class="comparison">
+        <comparacion-periodos></comparacion-periodos>
+    </section>
+    <page-title></page-title>
+    <section class="content">
+        <ng-view></ng-view>
+    </section>
+    <loader></loader>
+</body>
+</html>

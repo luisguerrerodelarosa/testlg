@@ -1,0 +1,51 @@
+<div class="container-fluid">
+	<div class="row row-eq-height">
+		<div class="col-sm-3 title-wrapper">
+			COMPARACIÓN DE PERÍODOS
+		</div>
+		<div class="gray-wrapper col-sm-9">
+			<div class="row">
+				<form name="comparar" novalidate="" ng-submit="loadServices(servicesParams)">
+					<div class="col-sm-12">
+						<div class="col-sm-2 mT5 p0 text-center">
+							Mensual
+						</div>
+						<div class="col-sm-5">
+							<div class="select-item">
+				                <select ng-model="servicesParams.comparingDate.date1" 
+				                	ng-options="item.formatDate as item.formatMinDate for item in filterDates">
+								</select>
+				            </div>
+				            <div class="selected-item">{{comparar2}}</div>
+						</div>
+						<div class="col-sm-5">
+							<div class="select-item">
+				                <select ng-model="servicesParams.comparingDate.date2" 
+				                	ng-options="item.formatDate as item.formatMinDate for item in filterDates">
+								</select>
+				            </div>
+				            <div class="selected-item">{{comparar2}}</div>
+						</div>
+						
+					</div>
+					<div class="col-sm-12 mT10">
+						<div class="col-sm-2 mT5 p0 text-center">
+							Anual
+						</div>
+						<div class="col-sm-5">
+							<div class="select-item">
+				                <select ng-model="servicesParams.year" 
+				                	ng-options="year for year in years">
+								</select>
+				            </div>
+				            <div class="selected-item">{{comparar2}}</div>
+						</div>
+						<div class="col-sm-4">
+							<input type="submit" value="Comparar" class="button main red" >
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

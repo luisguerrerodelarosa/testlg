@@ -1,0 +1,32 @@
+<div class="container-fluid">
+	<div ng-repeat="table in tables">
+		<div class="row mT30">
+			<div class="col-sm-12">
+				<h1>{{table.title}}</h1>
+			</div>
+		</div>
+		<div class="row mT30">
+			<div class="col-sm-12">
+				<table class="full-table">
+					<thead>
+						 <tr>
+							<th ng-repeat="header in table.headers">{{header.label}}</th>
+						</tr>
+					</thead>
+					<tbody ng-repeat="canal in table.data">
+						<tr>
+							<td ng-repeat="header in table.headers">
+								<i ng-if="header.hasArrow == true" ng-class="canal[header.key] > 0 ? 'up-arrow' : 'down-arrow'"></i>{{canal[header.key] | setFilter : header.filter}} 
+							</td>
+						</tr>
+						<tr ng-if="canal.detail != undefined" ng-repeat="child in canal.detail">
+							<td ng-repeat="header in table.headers" ng-class="$index == 0 ? 'child' : ''">
+								<i ng-if="header.hasArrow == true" ng-class="child[header.key] > 0 ? 'up-arrow' : 'down-arrow'"></i>{{child[header.key] | setFilter : header.filter}}
+							</td>
+						</tr>
+					</tbody> 
+				</table>
+			</div>
+		</div> 
+	</div>
+</div>

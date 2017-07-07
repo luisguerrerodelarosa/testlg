@@ -1,0 +1,73 @@
+<div class="row mT30">
+	<div class="col-sm-12">
+		<h1>Costo por transacción</h1>
+	</div>
+</div>
+<div class="row row-eq-height mT10">
+	<div class="col-sm-5 hidden-xs gray-wrapper pT20">
+		<div class="col-sm-12">
+			<div class="col-xs-4">
+				<img src="img/movil_color.svg" class="w100 max-height-120">
+			</div>
+			<div class="col-xs-8">
+				<p>Móvil es el canal con menor costo por transacción</p>
+				<table class="table">
+					<tr>
+						<th>Consulta</th>
+						<th>Monetaria</th>
+					</tr>
+					<tr>
+						<td>$0.04</td>
+						<td>$0.04</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-5 hidden-xs gray-wrapper pT20">
+		<div class="col-sm-12">
+			<div class="col-xs-4">
+				<img src="img/sucursal_color.svg" class="w100 max-height-120">
+			</div>
+			<div class="col-xs-8">
+				<p>Sucursal es el canal con mayor costo por transacción</p>
+				<table class="table">
+					<tr>
+						<th>Consulta</th>
+						<th>Monetaria</th>
+					</tr>
+					<tr>
+						<td>$13.18</td>
+						<td>$14.00</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-2 hidden-xs">
+		<img src="img/coins.svg" class="w100">
+	</div>
+</div>
+
+<div class="row row-eq-height mT30">
+	<div class="col-sm-6 gray-wrapper mT20">
+		<div class="col-sm-12 title-wrapper">
+			Costo Txs Consulta
+		</div>
+		<div class="col-sm-12">
+			<canvas id="line" class="chart chart-line" chart-data="linedata"
+			  chart-labels="linelabels" chart-legend="true" chart-series="lineseries">
+			</canvas> 
+		</div>
+	</div>
+	<div class="col-sm-6 gray-wrapper mT20">
+		<div class="col-sm-12 title-wrapper">
+			Costo Txs Monetarias
+		</div>
+		<div class="col-sm-12">
+			<canvas id="line" class="chart chart-line" chart-data="linedata"
+			  chart-labels="linelabels" chart-legend="true" chart-series="lineseries">
+			</canvas> 
+		</div>
+	</div>
+</div>

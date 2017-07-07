@@ -1,0 +1,32 @@
+<div ng-if="pageData.transformedData.infraestructura">
+	<div class="row mT30">
+		<div class="col-sm-12">
+			<h1>Infraestructura</h1>
+		</div>
+	</div>
+	<div class="row row-eq-height">
+		<div class="col-sm-4 mT20 gray-wrapper" ng-repeat="(key, value) in pageData.transformedData.infraestructura.channels">
+			<div class="col-sm-12 title-wrapper mB15">
+				{{value.label}}
+			</div>
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-md-5">
+						<img ng-src="img/{{key}}_color.svg" class="maxw-100">
+					</div>
+					<div class="col-md-7">
+						<table class="table">
+							<tr>
+								<th ng-repeat="info in value.info">{{info.data.date | date: 'MMM yy'}}</th>
+							</tr>
+							<tr>
+								<td ng-repeat="info in value.info">{{info.data.quantity | number }}</td>
+							</tr>
+						</table>
+						<!-- <div class="text-center">Variación: <i class="up-arrow"></i> 9%</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
